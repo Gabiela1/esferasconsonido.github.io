@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio </title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #controls {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
+        }
+        #visualizer {
+            width: 100%;
+            height: 40vh;
+        }
+        #histogram {
+            width: 100%;
+            height: 40vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <button id="startButton">play</button>
+        <button id="pauseButton">Pause</button>
+        <button id="backwardButton">-10s</button>
+        <button id="forwardButton">+10s</button>
+        <button id="masvel">+velocidad</button>
+        <button id="menosvel">-velocidad</button>
+        <input type="range" id="audioRange" min="0" max="100" value="0">
+        <select id="audioSelect">
+            <option value="audio.mp3">Audio 1</option>
+            <option value="audio2.mp3">Audio 2</option>
+            <option value="audio3.mp3">Audio 3</option>
+        </select>
+        <button id="backgroundColorButton">cambio de color de fondo</button>
+        <button id="increaseParticleSizeButton">incrementar tamaño de esfera</button>
+        <button id="decreaseParticleSizeButton">Reducir tamaño de esfera</button>
+        <button id="increaseSensitivityButton">incrementar sensibilidad</button>
+        <button id="decreaseSensitivityButton">Reducir sensibilidad</button>
+        <button id="toggle3DButton">Acercar camara</button>
+    </div>
+    <canvas id="visualizer"></canvas>
+    <canvas id="histogram"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
